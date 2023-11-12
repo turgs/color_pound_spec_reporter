@@ -58,7 +58,7 @@ class ColorPoundSpecReporter < Minitest::Reporters::SpecReporter
     puts
     # When e is a Minitest::UnexpectedError, the filtered backtrace is already part of the message printed out
     # by the previous line. In that case, and that case only, skip the backtrace output.
-    unless ex.is_a?(MiniTest::UnexpectedError)
+    unless ex.is_a?(Minitest::UnexpectedError)
       trace = filter_backtrace(ex.backtrace)
       trace.each { |line| puts color_pound line.gsub(/\A */, "") }
     end
