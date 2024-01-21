@@ -1,7 +1,5 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'color_pound_spec_reporter/version'
+
 
 Gem::Specification.new do |spec|
   spec.name          = "color_pound_spec_reporter"
@@ -22,3 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "minitest"
   spec.add_dependency "minitest-reporters", ">= 0.14.24"
 end
+
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'color_pound_spec_reporter/version'
