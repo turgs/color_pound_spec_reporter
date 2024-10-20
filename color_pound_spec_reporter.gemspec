@@ -1,10 +1,7 @@
 # coding: utf-8
 
-# lib = File.expand_path('../lib', __FILE__)
-$:.push File.expand_path('../lib', __FILE__)
-# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-$LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
-
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'color_pound_spec_reporter/version'
 
 Gem::Specification.new do |spec|
@@ -23,6 +20,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 1.9.1'
   spec.add_dependency "bundler"
   spec.add_dependency "rake"
-  spec.add_dependency "minitest"
-  spec.add_dependency "minitest-reporters", ">= 0.14.24"
+  spec.add_dependency "minitest", "~> 5.10"
+  spec.add_dependency "minitest-reporters", "~> 1.1.0"
 end
