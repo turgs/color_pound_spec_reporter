@@ -1,6 +1,10 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+# lib = File.expand_path('../lib', __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
+
 require 'color_pound_spec_reporter/version'
 
 Gem::Specification.new do |spec|
